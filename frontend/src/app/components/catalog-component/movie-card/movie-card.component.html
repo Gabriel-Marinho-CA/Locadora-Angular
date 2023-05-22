@@ -1,0 +1,23 @@
+<div class="shelf">
+    <div class="img-shelf">
+        <img
+            src="{{moviesContent.image}}"
+            alt="">
+    </div>
+    <div class="title-shelf">
+        <p>{{moviesContent.title}}</p>
+    </div>
+    <form class="action-shelf"
+        (ngSubmit)="createCart()"
+        [formGroup]="formAddMoviesToUser">
+        <p class="price-shelf">R$ {{moviesContent.price}}/dia</p>
+
+        <button *ngIf="userLogged" type="submit" class="buy-btn">Alugar</button>
+        <a [routerLink]="['/login']" *ngIf="!userLogged">Faça login</a>
+ 
+        <input type="hidden" name="" formControlName="movieId" [(ngModel)]="movie_id">
+
+
+    </form>
+
+</div>

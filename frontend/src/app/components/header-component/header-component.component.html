@@ -1,0 +1,23 @@
+<header class="header">
+    <nav class="container">
+        <div>
+            <h1><a href="/">Locadora <strong>que loca</strong></a></h1>
+            <ul>
+                <li>
+                    <a [routerLink]="['/']">Homepage</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/movies']">Catálogo</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-area">
+
+            <button *ngIf="userLogged" (click)="loggout()">Sair</button>
+            <a [routerLink]="['/login']" *ngIf="!userLogged"><span><i class="fa fa-user" aria-hidden="true"></i></span></a>
+            <a *ngIf="userLogged" (click)="redirectToProfile()"><i class="fa fa-user" aria-hidden="true"></i></a>
+
+            <!-- <a [routerLink]="['/cart']"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> -->
+        </div>
+    </nav>
+</header>

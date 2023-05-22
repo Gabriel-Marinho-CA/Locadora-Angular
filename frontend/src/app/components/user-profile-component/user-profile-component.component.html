@@ -1,0 +1,16 @@
+<div id="user-profile">
+    <section class="container" *ngIf="UserProfile">
+        <div class="userData">
+            <h2>Ola, <span>{{UserProfile.name}}</span></h2>
+        </div>
+        <h3 *ngIf="UserProfile.movies.length > 0">Abaixo estão listados os filmes que
+            você tem alugado</h3>
+        <h3 *ngIf="UserProfile.movies == 0">Você não possui filmes alugados</h3>
+        <div *ngIf="UserProfile" class="movies">
+
+            <app-movie-card-user-component
+                *ngFor="let movie of UserProfile.movies"
+                [moviesContent]="movie"></app-movie-card-user-component>
+        </div>
+    </section>
+</div>

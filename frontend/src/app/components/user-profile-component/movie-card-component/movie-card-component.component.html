@@ -1,0 +1,17 @@
+<div class="movie-card-user-profile shelf">
+    <div class="img-shelf img-profile-shelf">
+        <img src="{{moviesContent.image}}" alt="">
+    </div>
+    <div class="title-shelf">
+        <p>{{moviesContent.title}}</p>
+    </div>
+    <form 
+    [formGroup]="formDeleteMovie"
+    (ngSubmit)="onSubmit()"
+    class="actions-card-profile action-shelf">
+        <p class="price-shelf"> R${{moviesContent.price}}/dia</p>
+        <button class="delete-btn"><i class="fa fa-trash"
+                aria-hidden="true"></i></button>
+        <input type="hidden" name="movieId"  formControlName="movieId" [(ngModel)]="movie_id">
+    </form>
+</div>

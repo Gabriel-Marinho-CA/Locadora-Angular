@@ -1,0 +1,95 @@
+@import "../../helpers/mixins";
+@import "../../helpers/common/shelf";
+
+$robot: "Roboto";
+
+#home-page {
+  padding: 2rem 0;
+  background-color: #F2F2F2;
+  height: 100%;
+
+  section.title-main-section {
+    .title-show {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width:1100px) {
+        flex-direction: column;
+
+        .title,
+        .gallery-imgs-main {
+          text-align: center;
+          flex-basis: 100%;
+          width: 100%;
+        }
+
+        .title {
+          margin-bottom: 1.6rem;
+
+          button {
+            width: 100%;
+            max-width: 105px;
+          }
+        }
+      }
+
+      .title {
+        flex-basis: 50%;
+
+        h1 {
+          font: normal 400 60px/70px $robot;
+          padding-bottom: 1rem;
+        }
+
+        p {
+          font: normal 400 20px/23px $robot;
+          color: #838383;
+          padding-bottom: 1rem;
+        }
+
+        button {
+          @include buyBtn(15px);
+        }
+      }
+
+      .gallery-imgs-main {
+        max-width: 600px;
+        flex-basis: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.35rem;
+
+        div img {
+          border-radius: 10px;
+        }
+
+        @media (max-width:767px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+
+  section.releases {
+    padding: 4.6rem 0;
+
+    .title-section {
+      @include TitleSectionlines;
+    }
+
+    .carousel-movies-release {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      @media (max-width:991px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width:767px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

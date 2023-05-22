@@ -1,0 +1,46 @@
+<div id="signup-page">
+  <div class="container">
+    <section class="form-auth-content">
+      <div class="content">
+          <h2>Cadastre-se</h2>
+          <form class="formSignIn"
+            [formGroup]="formSignUp"
+            (ngSubmit)="onSubmit()">
+            <div>
+              <input
+                id="nome"
+                type="nome"
+                placeholder="Nome" 
+                formControlName="name"
+                />
+            </div>
+            <div>
+              <input
+                id="email"
+                type="email"
+                placeholder="E-mail"
+                formControlName="email"
+                />
+            </div>
+            <div>
+              <input
+                id="password"
+                type="password"
+                placeholder="Senha"
+                formControlName="password"
+                />
+            </div>
+            <button type="submit">Cadastrar</button>
+          </form>
+          <span>Já possui uma conta? <a [routerLink]="['/login']"> Faça seu
+              login.</a></span>
+        </div>
+          <div class="card-image">
+            <img
+              src="https://img.freepik.com/fotos-gratis/colagem-de-fundo-de-filme_23-2149876008.jpg?w=826&t=st=1684022385~exp=1684022985~hmac=44099e9910d7860989f71705d81de1b00c9d99e69c08d012c07c921a091169c3"
+              alt="Login image"
+              />
+          </div>
+    </section>
+  </div>
+</div>

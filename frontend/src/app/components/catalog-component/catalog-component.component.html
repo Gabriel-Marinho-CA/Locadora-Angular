@@ -1,0 +1,43 @@
+<div id="catalog">
+  <div class="container">
+    <section class="filter">
+      <h3 class="title-filter">Filtrar</h3>
+      <div>
+        <input
+          id="filtro"
+          type="filtro"
+          placeholder="Procurar"
+          /><button>
+          <span> <i class="fa fa-search"></i></span>
+        </button>
+      </div>
+    </section>
+    <section class="releases">
+      <h2 class="title-section">Lançamentos</h2>
+
+      <div class="carousel-movies-release">
+        <app-movie-card
+          *ngFor="let movie of listMovies"
+          [moviesContent]="movie"></app-movie-card>
+      </div>
+    </section>
+    <section class="populares">
+      <h2 class="title-section">Populares</h2>
+
+      <div class="carousel-movies-release">
+        <app-movie-card
+          *ngFor="let movie of listMovies"
+          [moviesContent]="movie"></app-movie-card>
+      </div>
+    </section>
+    <section class="promocao">
+      <h2 class="title-section">Promoção</h2>
+
+      <div class="carousel-movies-release">
+        <app-movie-card
+          *ngFor="let movie of listMovies"
+          [moviesContent]="movie"></app-movie-card>
+      </div>
+    </section>
+  </div>
+</div>

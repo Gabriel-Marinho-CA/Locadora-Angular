@@ -1,0 +1,80 @@
+.form-auth-content {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  max-width: 976px;
+}
+
+.form-auth-content .content {
+  padding: 1rem;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin: 0 auto;
+}
+
+.form-auth-content .content h2 {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-auth-content .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .7rem;
+}
+
+.form-auth-content .content form input {
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  height: 43px;
+  padding: 0 1rem;
+}
+
+.form-auth-content .content form button {
+  margin: 1.3rem 0;
+  background-color: #212529;
+  border-radius: 5px;
+  height: 43px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.form-auth-content .content form button:hover {
+  color: #212529;
+  border: 1px solid #212529;
+  background-color: #fff;
+}
+
+.form-auth-content .content span a {
+  color: #4444df;
+}
+
+.form-auth-content .card-image {
+  max-width: 488px;
+}
+
+#signup-page {
+  padding: 2rem 0;
+  background-color: #f2f2f2;
+  margin-top: 77px;
+  height: 100%;
+}
+/*# sourceMappingURL=signup-component.component.css.map */

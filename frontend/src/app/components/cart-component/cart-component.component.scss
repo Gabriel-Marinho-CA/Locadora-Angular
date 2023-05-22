@@ -1,0 +1,220 @@
+@import "../../helpers/mixins";
+
+$robot: "Roboto";
+
+#cart-page {
+  padding: 2rem 0;
+  background-color: #f2f2f2;
+  margin-top: 77px;
+  height: 100%;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .main-movie-content {
+      background-color: #fff;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+
+      @media (max-width:991px) {
+        flex-direction: column;
+      }
+
+      .image-movie {
+        max-width: 231px;
+      }
+
+      .content-movie {
+
+        h3 {
+          font-size: 22px;
+          padding-bottom: 1rem;
+        }
+
+        p:not(.price) {
+          font-size: 18px;
+          color: #838383;
+        }
+
+        .score {
+          padding: 1.65rem 0;
+
+          span {
+            &:nth-child(1) {
+              color: #FF8F52;
+            }
+
+            &:nth-child(2) {
+              padding-left: .4rem;
+            }
+          }
+        }
+
+        .price {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .buy-movie-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+
+      @media (max-width:991px) {
+        flex-direction: column;
+
+        .left-buy-area,
+        .right-buy-area {
+          flex-basis: 100%;
+          width: 100%;
+        }
+      }
+
+      .left-buy-area {
+        padding: 2rem;
+        background-color: #fff;
+        flex-basis: 78%;
+
+        p {
+          margin-bottom: 1rem;
+        }
+
+        .card-movie-buy {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          .image-card {
+            max-width: 100px;
+          }
+
+          .action-cart-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .title-cart-movie {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .title-cart-movie {
+              h3 {
+                font-size: 22px;
+                font-weight: 400;
+              }
+
+              button {
+                i {
+                  font-size: 20px;
+
+                  &:hover {
+                    color: red;
+                  }
+                }
+              }
+            }
+
+            .quantity-total-card-cart {
+              display: grid;
+              grid-template-columns: repeat(2, auto);
+              grid-template-rows: repeat(2, auto);
+
+              .title-quantity {
+                grid-area: 1/1/1/2;
+                margin-bottom: 5px;
+              }
+
+              .input-quantity {
+                position: relative;
+                grid-area: 2/1/2/1;
+                width: max-content;
+
+                input {
+                  height: 30px;
+                  max-width: 65px;
+                  text-align: center;
+
+                  &::-webkit-outer-spin-button,
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                  }
+
+                  &[type=number] {
+                    -moz-appearance: textfield;
+                  }
+
+                }
+
+                button {
+                  position: absolute;
+                  font-size: 12px;
+                  top: 21%;
+                  cursor: pointer;
+
+                  &:nth-of-type(1) {
+                    left: 8px;
+                  }
+
+                  &:nth-of-type(2) {
+                    right: 6px;
+                  }
+                }
+
+              }
+
+              .totalSingleItem {
+                grid-area: 2/2/2/2;
+                text-align: end;
+                font-size: 16px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      .right-buy-area {
+        background-color: #fff;
+        padding: 1rem;
+        flex-basis: 22%;
+
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          white-space: pre;
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+        button {
+          width: 100%;
+          background: #212529;
+          border-radius: 5px;
+          color: #fff;
+          padding: .5rem 0;
+          margin-top: 1rem;
+          transition: all .24s ease;
+          font-size: 16px;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: #fff;
+            outline: 1px solid #212529;
+            color: #fff;
+            color: #212529;
+          }
+        }
+      }
+    }
+  }
+}

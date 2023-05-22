@@ -1,0 +1,11 @@
+@import "../../helpers/mixins";
+@import "../../helpers/common/form-auth";
+
+$robot: "Roboto";
+
+#login-page {
+  padding: 2rem 0;
+  background-color: #f2f2f2;
+  margin-top: 77px;
+  height: 100%;
+}

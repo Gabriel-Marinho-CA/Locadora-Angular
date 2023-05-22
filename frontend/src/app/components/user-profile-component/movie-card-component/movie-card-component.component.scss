@@ -1,0 +1,25 @@
+@import "../../../helpers/common/shelf";
+
+.movie-card-user-profile {
+  .img-profile-shelf {
+    max-width: 100%;
+  }
+
+  .title-shelf {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .actions-card-profile {
+    .delete-btn{
+        background-color: red;
+
+        &:hover {
+            outline: 1px solid red;
+
+            i {
+                color: red;
+            }
+        }
+    }
+  }
+}

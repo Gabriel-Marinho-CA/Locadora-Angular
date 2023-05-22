@@ -1,0 +1,38 @@
+<div id="login-page">
+  <div class="container">
+    <section class="form-auth-content">
+      <div class="content">
+        <h2>Entre na sua conta</h2>
+        <form class="formSignIn"
+          [formGroup]="formSignIn"
+          (ngSubmit)="onSubmit()">
+          <div>
+            <input
+              id="email"
+              type="email"
+              placeholder="E-mail"
+              formControlName="email"
+              />
+          </div>
+          <div>
+            <input
+              id="password"
+              type="password"
+              placeholder="Senha"
+              formControlName="password"
+              />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <span>Ainda não tem uma conta? <a [routerLink]="['/signup']">Cadastre-se
+            aqui</a></span>
+      </div>
+      <div class="card-image">
+        <img
+          src="https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg?w=1380&t=st=1684018261~exp=1684018861~hmac=d6c16bbc2a6c696236a56dc17bc1b2601cfee05935449511b7083797f0f1dc82"
+          alt="Login image"
+          />
+      </div>
+    </section>
+  </div>
+</div>

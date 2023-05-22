@@ -1,0 +1,71 @@
+<div id="cart-page">
+    <div class="container">
+        <section class="main-content">
+            <div class="main-movie-content">
+                <div class="image-movie">
+                    <img
+                        src="{{moviesCart.image}}"
+                        alt="{{moviesCart.title}}"
+                        />
+                </div>
+                <div class="content-movie">
+                    <div class="info-movie">
+                        <h3>{{moviesCart.title}}</h3>
+                        <p> {{moviesCart.description}}</p>
+                    </div>
+                    <div class="score">
+                        <span class="fa fa-star checked"></span>
+                        <span>11/10</span>
+                    </div>
+                    <p class="price">R$ {{moviesCart.price}}/dia</p>
+                </div>
+            </div>
+            <div class="buy-movie-area">
+                <div class="left-buy-area">
+                    <p>CARRINHO</p>
+
+                    <div class="card-movie-buy">
+                        <div class="image-card">
+                            <img
+                                src="{{moviesCart.image}}"
+                                alt="{{moviesCart.title}}"
+                                />
+                        </div>
+                        <div class="action-cart-area">
+                            <div class="title-cart-movie">
+                                <h3>{{moviesCart.title}}</h3>
+                                <button (click)="removeMovieToCart()"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></button>
+                            </div>
+                            <div class="quantity-total-card-cart">
+                                <p class="title-quantity">Quantidade de dias</p>
+                                <div class="input-quantity">
+                                    <button (click)="decrement()"><i class="fa
+                                            fa-minus" aria-hidden="true"></i></button>
+                                    <input type="number"
+                                        [(ngModel)]="quantityValue">
+                                    <button (click)="increment()"><i class="fa
+                                            fa-plus" aria-hidden="true"></i></button>
+                                </div>
+                                <p class="totalSingleItem"
+                                    *ngIf="totalSingleMovie">Total R$<span>{{totalSingleMovie
+                                        * quantityValue}}</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form
+                    [formGroup]="formAddMoviesToUser"
+                    (ngSubmit)="buyMovie()"
+                    class="right-buy-area">
+                    <p *ngIf="totalSingleMovie">Subtotal para {{quantityValue}}
+                        items: R$<span>{{(totalSingleMovie
+                            * quantityValue) +10 }}</span></p>
+                    <button>Alugar</button>
+                    <input type="hidden" name="" formControlName="movieId"
+                        [(ngModel)]="movie_id">
+                </form>
+            </div>
+        </section>
+    </div>
+</div>

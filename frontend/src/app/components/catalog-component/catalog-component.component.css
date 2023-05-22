@@ -1,0 +1,191 @@
+.shelf {
+  padding: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 6px #dedede;
+          box-shadow: 0px 3px 6px #dedede;
+  width: 100%;
+}
+
+.shelf .img-shelf {
+  max-width: 250px;
+}
+
+.shelf .title-shelf p {
+  font: normal 400 22px/26px "Roboto";
+  margin: .2rem 0 1rem 0;
+  min-height: 52px;
+  max-height: 52px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf .action-shelf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shelf .action-shelf a, .shelf .action-shelf button {
+  font: normal 400 0.85714 "Roboto";
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  -webkit-transition: all .23s ease-out;
+  transition: all .23s ease-out;
+}
+
+.shelf .action-shelf a:hover, .shelf .action-shelf button:hover {
+  background: transparent;
+  outline: 1px solid #000;
+  color: #000;
+}
+
+#catalog {
+  padding: 2rem 0;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+#catalog section > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5rem;
+}
+
+@media (max-width: 1200px) {
+  #catalog section > div {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #catalog section > div {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#catalog section {
+  padding: 1.5rem 0;
+}
+
+#catalog section h2 {
+  font: normal 400 32px/38px "Roboto";
+  text-align: center;
+  max-width: 37%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+#catalog section h2::before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: #D9D9D9;
+}
+
+#catalog section h2::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: #D9D9D9;
+}
+
+#catalog .filter {
+  padding-bottom: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 997px) {
+  #catalog .filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #catalog .filter h3,
+  #catalog .filter > div {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+#catalog .filter h3 {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  padding: 0 .6rem;
+}
+
+@media (max-width: 997px) {
+  #catalog .filter h3 {
+    padding-bottom: 1.6rem;
+  }
+}
+
+#catalog .filter > div {
+  position: relative;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#catalog .filter > div input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #000;
+  padding: 0 .6rem;
+  font-size: 16px;
+  outline: none;
+}
+
+#catalog .filter > div button {
+  position: absolute;
+  right: 3%;
+  background: transparent;
+}
+
+#catalog .filter > div button i {
+  color: #cecece;
+  font-size: 16px;
+}
+/*# sourceMappingURL=catalog-component.component.css.map */

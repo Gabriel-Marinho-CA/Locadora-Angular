@@ -1,0 +1,89 @@
+.header {
+  padding: 1.5rem 0;
+  -webkit-box-shadow: 0px 3px 6px #cecece;
+          box-shadow: 0px 3px 6px #cecece;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  inset: 0;
+  background-color: #fff;
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav > div:nth-of-type(1):not(.user-area) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav > div:nth-of-type(1):not(.user-area) h1 {
+  font-weight: 400;
+}
+
+.header nav > div:nth-of-type(1):not(.user-area) h1 a {
+  color: #212529;
+}
+
+.header nav > div:nth-of-type(1):not(.user-area) ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.header nav > div:nth-of-type(1):not(.user-area) ul li a {
+  color: #212529;
+}
+
+.header nav .user-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.header nav .user-area * {
+  font-size: 19px;
+}
+
+.header nav .user-area button {
+  -webkit-transition: color .32s ease;
+  transition: color .32s ease;
+}
+
+.header nav .user-area button:hover {
+  color: red;
+}
+
+.header nav .user-area a i {
+  color: #000;
+  -webkit-transition: color .32s ease;
+  transition: color .32s ease;
+}
+
+.header nav .user-area a:nth-child(2):hover i {
+  color: #3636eb;
+}
+
+.header nav .user-area a:nth-child(1):hover i {
+  color: #39ce25;
+}
+/*# sourceMappingURL=header-component.component.css.map */

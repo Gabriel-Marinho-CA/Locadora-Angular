@@ -1,0 +1,70 @@
+.header {
+  padding: 1.5rem 0;
+  box-shadow: 0px 3px 6px #cecece;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: fit-content;
+  inset: 0;
+  background-color: #fff;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >div:nth-of-type(1):not(.user-area) {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      h1 {
+        font-weight: 400;
+
+        a {
+          color: #212529;
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 2rem;
+
+        li a {
+          color: #212529;
+        }
+      }
+    }
+
+    .user-area {
+      display: flex;
+      gap: 1.3rem;
+
+      * {
+        font-size: 19px;
+      }
+
+      button {
+        transition: color .32s ease;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      a {
+        i {
+          color: #000;
+          transition: color .32s ease;
+        }
+
+        &:nth-child(2):hover i {
+          color: #3636eb;
+        }
+        &:nth-child(1):hover i {
+          color: #39ce25;
+        }
+      }
+    }
+  }
+}

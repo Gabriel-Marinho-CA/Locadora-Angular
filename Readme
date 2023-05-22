@@ -1,0 +1,19 @@
+## DOCUMENTAÇÃO DO CLI
+
+#Comandos utilizados no Angular Cli
+
+-- instalando o angular
+ npm install -g @angular/cli ( alguns versionamentos do nodejs, podem dar conflito com algumas versoes do angular, [ node usado no projeto : 20.1.0 ] )
+
+-- Criando o projeto
+ng new Locadora
+
+-- Iniciando o projeto
+ng serve
+
+-- Criando os componentes
+
+Criamos os componentes utilizando o ng generate. Criamos a pasta e o component utilizando o ng generate component components/componenteName, e os components subsequentes ddentro da mesma pasta é utilizado o mesmo comando.
+
+Utilizamos esse comando pois todas as importações no App.module.ts já é feita automaticamente, além da criação dos arquivos.
+ 

@@ -1,0 +1,73 @@
+.shelf {
+  padding: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 6px #dedede;
+          box-shadow: 0px 3px 6px #dedede;
+  width: 100%;
+}
+
+.shelf .img-shelf {
+  max-width: 250px;
+}
+
+.shelf .title-shelf p {
+  font: normal 400 22px/26px "Roboto";
+  margin: .2rem 0 1rem 0;
+  min-height: 52px;
+  max-height: 52px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shelf .action-shelf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shelf .action-shelf a, .shelf .action-shelf button {
+  font: normal 400 0.85714 "Roboto";
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  -webkit-transition: all .23s ease-out;
+  transition: all .23s ease-out;
+}
+
+.shelf .action-shelf a:hover, .shelf .action-shelf button:hover {
+  background: transparent;
+  outline: 1px solid #000;
+  color: #000;
+}
+
+.movie-card-user-profile .img-profile-shelf {
+  max-width: 100%;
+}
+
+.movie-card-user-profile .title-shelf {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.movie-card-user-profile .actions-card-profile .delete-btn {
+  background-color: red;
+}
+
+.movie-card-user-profile .actions-card-profile .delete-btn:hover {
+  outline: 1px solid red;
+}
+
+.movie-card-user-profile .actions-card-profile .delete-btn:hover i {
+  color: red;
+}
+/*# sourceMappingURL=movie-card-component.component.css.map */
